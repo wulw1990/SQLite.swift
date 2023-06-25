@@ -31,7 +31,7 @@ import SQLCipher
 #elseif os(Linux)
 import CSQLite
 #else
-import SQLite3
+import SQLite3Load
 #endif
 
 /// A connection to SQLite.
@@ -104,12 +104,37 @@ public final class Connection {
     ///
     /// - Returns: A new database connection.
     public init(_ location: Location = .inMemory, readonly: Bool = false) throws {
+#if true
         let flags = readonly ? SQLITE_OPEN_READONLY : (SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE)
+        
+        print("open 0")
         try check(sqlite3_open_v2(location.description,
                                   &_handle,
                                   flags | SQLITE_OPEN_FULLMUTEX | SQLITE_OPEN_URI,
                                   nil))
+        print("open 1")
+        let libsimple = true
+        if libsimple{
+#if SWIFT_PACKAGE
+            let bundle = Bundle.module
+#else
+            let bundle = Bundle(for: Connection.self)
+#endif
+            
+            let url = bundle.url(
+                forResource: "libsimple-osx-x64/libsimple.dylib",
+                withExtension: nil)
+            
+            print("url: \(String(describing: url))")
+            
+            try check(sqlite3_enable_load_extension(_handle, 1))
+            print("sqlite3_enable_load_extension done.")
+            
+
+        }
+        
         queue.setSpecific(key: Connection.queueKey, value: queueContext)
+#endif
     }
 
     /// Initializes a new connection to a database.

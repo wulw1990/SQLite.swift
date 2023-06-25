@@ -195,6 +195,9 @@
 		997DF2AF287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
 		997DF2B0287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
 		997DF2B1287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
+		D0EAE82D2A48193400559E83 /* libsqlite3load.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D0EAE82E2A48195200559E83 /* libsqlite3load.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */; };
+		D0EAE8362A4820FB00559E83 /* libsimple-osx-x64 in Resources */ = {isa = PBXBuildFile; fileRef = D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */; };
 		DB58B21128FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
 		DB58B21228FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
 		DB58B21328FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
@@ -271,6 +274,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D0EAE82C2A48191700559E83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0EAE82D2A48193400559E83 /* libsqlite3load.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		02A43A9722738CF100FEC494 /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
 		03A65E5A1C6BB0F50062603F /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +343,9 @@
 		49EB68C31F7B3CB400D89D40 /* Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
 		997DF2AD287FC06D00F8DF95 /* Query+with.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+with.swift"; sourceTree = "<group>"; };
 		A121AC451CA35C79005A31D1 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3load.dylib; sourceTree = "<group>"; };
+		D0EAE8322A481DFE00559E83 /* libsqlite3load */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libsqlite3load; sourceTree = "<group>"; };
+		D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "libsimple-osx-x64"; sourceTree = "<group>"; };
 		DB58B21028FB864300F8EEA4 /* SchemaReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaReader.swift; sourceTree = "<group>"; };
 		DB58B21528FC7C4600F8EEA4 /* SQLiteFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteFeature.swift; sourceTree = "<group>"; };
 		DB7C5DA528D7C9B6006395CF /* SQLiteVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteVersion.swift; sourceTree = "<group>"; };
@@ -405,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EAE82E2A48195200559E83 /* libsqlite3load.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,14 +506,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D0EAE82A2A4818A700559E83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE247AC91C3F04ED00AE3E12 = {
 			isa = PBXGroup;
 			children = (
+				D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */,
 				3D3C3CCB26E5568800759140 /* SQLite.playground */,
 				EE247AD51C3F04ED00AE3E12 /* SQLite */,
 				EE247AE11C3F04ED00AE3E12 /* SQLiteTests */,
 				EE247B8A1C3F81D000AE3E12 /* Metadata */,
 				EE247AD41C3F04ED00AE3E12 /* Products */,
+				D0EAE82A2A4818A700559E83 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -516,6 +545,8 @@
 		EE247AD51C3F04ED00AE3E12 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */,
+				D0EAE8322A481DFE00559E83 /* libsqlite3load */,
 				EE247AF71C3F06E900AE3E12 /* Foundation.swift */,
 				EE247AF81C3F06E900AE3E12 /* Helpers.swift */,
 				EE247AD81C3F04ED00AE3E12 /* Info.plist */,
@@ -762,6 +793,7 @@
 				EE247B371C3F3ED000AE3E12 /* Sources */,
 				EE247B381C3F3ED000AE3E12 /* Frameworks */,
 				EE247B3A1C3F3ED000AE3E12 /* Resources */,
+				D0EAE82C2A48191700559E83 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -895,6 +927,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EAE8362A4820FB00559E83 /* libsimple-osx-x64 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,12 +1576,18 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/SQLite/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Sources/SQLite/libsqlite3load/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
@@ -1568,12 +1607,18 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/SQLite/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Sources/SQLite/libsqlite3load/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Release;

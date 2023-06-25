@@ -5,7 +5,7 @@ import SQLCipher
 #elseif os(Linux)
 import CSQLite
 #else
-import SQLite3
+import SQLite3Load
 #endif
 
 public enum Result: Error {

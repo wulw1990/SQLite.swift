@@ -1,0 +1,5 @@
+module SQLite3Load {
+    header "sqlite3load.h"
+    link "sqlite3load"
+    export *
+}
