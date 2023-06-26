@@ -195,9 +195,11 @@
 		997DF2AF287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
 		997DF2B0287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
 		997DF2B1287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
-		D0EAE82D2A48193400559E83 /* libsqlite3load.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		D0EAE82E2A48195200559E83 /* libsqlite3load.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */; };
 		D0EAE8362A4820FB00559E83 /* libsimple-osx-x64 in Resources */ = {isa = PBXBuildFile; fileRef = D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */; };
+		D0EAE84E2A499F5A00559E83 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EAE84D2A499E9D00559E83 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0EAE8532A49B69700559E83 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8522A49B69700559E83 /* libsqlite3.a */; };
+		D0EAE8542A49B6B600559E83 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8522A49B69700559E83 /* libsqlite3.a */; };
+		D0EAE8562A49B97600559E83 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EAE8552A49B95400559E83 /* sqlite3.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DB58B21128FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
 		DB58B21228FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
 		DB58B21328FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
@@ -281,7 +283,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D0EAE82D2A48193400559E83 /* libsqlite3load.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +344,11 @@
 		49EB68C31F7B3CB400D89D40 /* Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
 		997DF2AD287FC06D00F8DF95 /* Query+with.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+with.swift"; sourceTree = "<group>"; };
 		A121AC451CA35C79005A31D1 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3load.dylib; sourceTree = "<group>"; };
-		D0EAE8322A481DFE00559E83 /* libsqlite3load */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libsqlite3load; sourceTree = "<group>"; };
 		D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "libsimple-osx-x64"; sourceTree = "<group>"; };
+		D0EAE84C2A4999D300559E83 /* SQLite.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = SQLite.modulemap; sourceTree = "<group>"; };
+		D0EAE84D2A499E9D00559E83 /* SQLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLite.h; sourceTree = "<group>"; };
+		D0EAE8522A49B69700559E83 /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsqlite3.a; sourceTree = "<group>"; };
+		D0EAE8552A49B95400559E83 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		DB58B21028FB864300F8EEA4 /* SchemaReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaReader.swift; sourceTree = "<group>"; };
 		DB58B21528FC7C4600F8EEA4 /* SQLiteFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteFeature.swift; sourceTree = "<group>"; };
 		DB7C5DA528D7C9B6006395CF /* SQLiteVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteVersion.swift; sourceTree = "<group>"; };
@@ -409,6 +412,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EAE8532A49B69700559E83 /* libsqlite3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +428,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EAE82E2A48195200559E83 /* libsqlite3load.dylib in Frameworks */,
+				D0EAE8542A49B6B600559E83 /* libsqlite3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +520,10 @@
 		EE247AC91C3F04ED00AE3E12 = {
 			isa = PBXGroup;
 			children = (
-				D0EAE8292A48186D00559E83 /* libsqlite3load.dylib */,
+				D0EAE8522A49B69700559E83 /* libsqlite3.a */,
+				D0EAE8552A49B95400559E83 /* sqlite3.h */,
+				D0EAE84D2A499E9D00559E83 /* SQLite.h */,
+				D0EAE84C2A4999D300559E83 /* SQLite.modulemap */,
 				3D3C3CCB26E5568800759140 /* SQLite.playground */,
 				EE247AD51C3F04ED00AE3E12 /* SQLite */,
 				EE247AE11C3F04ED00AE3E12 /* SQLiteTests */,
@@ -546,7 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */,
-				D0EAE8322A481DFE00559E83 /* libsqlite3load */,
 				EE247AF71C3F06E900AE3E12 /* Foundation.swift */,
 				EE247AF81C3F06E900AE3E12 /* Helpers.swift */,
 				EE247AD81C3F04ED00AE3E12 /* Info.plist */,
@@ -689,6 +695,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EAE84E2A499F5A00559E83 /* SQLite.h in Headers */,
+				D0EAE8562A49B97600559E83 /* sqlite3.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,6 +1511,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 0.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
@@ -1527,6 +1539,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 0.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
@@ -1581,12 +1597,13 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "$(SRCROOT)/SQLite.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Sources/SQLite/libsqlite3load/";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
@@ -1612,12 +1629,13 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "$(SRCROOT)/SQLite.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/Sources/SQLite/libsqlite3load/";
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};

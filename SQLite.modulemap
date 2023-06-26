@@ -1,0 +1,10 @@
+framework module SQLite {
+  umbrella header "SQLite.h"
+  export *
+  
+  module SQLite3Load {
+      header "sqlite3.h"
+      link "sqlite3"
+      export *
+  }
+}

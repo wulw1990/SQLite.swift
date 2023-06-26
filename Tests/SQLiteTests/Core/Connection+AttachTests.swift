@@ -9,7 +9,7 @@ import SQLCipher
 #elseif os(Linux)
 import CSQLite
 #elseif os(OSX)
-import SQLite3Load
+import SQLite.SQLite3Load
 #else
 import SQLite3
 #endif
