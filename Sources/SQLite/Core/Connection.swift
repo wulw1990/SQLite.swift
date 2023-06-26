@@ -30,8 +30,10 @@ import sqlite3
 import SQLCipher
 #elseif os(Linux)
 import CSQLite
-#else
+#elseif os(OSX)
 import SQLite3Load
+#else
+import SQLite3
 #endif
 
 /// A connection to SQLite.
@@ -104,7 +106,6 @@ public final class Connection {
     ///
     /// - Returns: A new database connection.
     public init(_ location: Location = .inMemory, readonly: Bool = false) throws {
-#if true
         let flags = readonly ? SQLITE_OPEN_READONLY : (SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE)
         
         print("open 0")
@@ -112,6 +113,7 @@ public final class Connection {
                                   &_handle,
                                   flags | SQLITE_OPEN_FULLMUTEX | SQLITE_OPEN_URI,
                                   nil))
+#if os(OSX)
         print("open 1")
         let libsimple = true
         if libsimple{
@@ -129,12 +131,10 @@ public final class Connection {
             
             try check(sqlite3_enable_load_extension(_handle, 1))
             print("sqlite3_enable_load_extension done.")
-            
 
         }
-        
-        queue.setSpecific(key: Connection.queueKey, value: queueContext)
 #endif
+        queue.setSpecific(key: Connection.queueKey, value: queueContext)
     }
 
     /// Initializes a new connection to a database.

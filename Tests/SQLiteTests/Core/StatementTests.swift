@@ -7,8 +7,10 @@ import sqlite3
 import SQLCipher
 #elseif os(Linux)
 import CSQLite
-#else
+#elseif os(OSX)
 import SQLite3Load
+#else
+import SQLite3
 #endif
 
 class StatementTests: SQLiteTestCase {
