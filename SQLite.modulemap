@@ -4,7 +4,7 @@ framework module SQLite {
   
   module SQLite3Load {
       header "sqlite3.h"
-      link "sqlite3"
       export *
   }
 }
+
