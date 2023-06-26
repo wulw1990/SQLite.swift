@@ -2,9 +2,8 @@ framework module SQLite {
   umbrella header "SQLite.h"
   export *
   
-  module SQLite3Load {
-      header "sqlite3.h"
-      export *
+  explicit module SQLite3Load {
+      private header "sqlite3.h"
   }
 }
 
