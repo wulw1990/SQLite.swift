@@ -197,7 +197,6 @@
 		997DF2B1287FC06D00F8DF95 /* Query+with.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DF2AD287FC06D00F8DF95 /* Query+with.swift */; };
 		D0EAE8362A4820FB00559E83 /* libsimple-osx-x64 in Resources */ = {isa = PBXBuildFile; fileRef = D0EAE8352A4820ED00559E83 /* libsimple-osx-x64 */; };
 		D0EAE84E2A499F5A00559E83 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EAE84D2A499E9D00559E83 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0EAE8532A49B69700559E83 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8522A49B69700559E83 /* libsqlite3.a */; };
 		D0EAE8542A49B6B600559E83 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EAE8522A49B69700559E83 /* libsqlite3.a */; };
 		D0EAE8562A49B97600559E83 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EAE8552A49B95400559E83 /* sqlite3.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DB58B21128FB864300F8EEA4 /* SchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B21028FB864300F8EEA4 /* SchemaReader.swift */; };
@@ -412,7 +411,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EAE8532A49B69700559E83 /* libsqlite3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1511,10 +1509,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 0.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
@@ -1539,10 +1534,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 0.14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencelis.SQLite;
 				PRODUCT_NAME = SQLite;
